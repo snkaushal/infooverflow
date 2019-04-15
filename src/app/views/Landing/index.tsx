@@ -3,24 +3,49 @@ import React from 'react';
 import classnames from 'classnames';
 import RotatingCard from '../../../lib/components/RotatingCard';
 
+// Mock Data
+const categories = [
+  {category: 'Design', 
+    icon: 'fa-paint-brush', 
+    description: 'Design is a work process which has a user perspective and '+
+    'drives development based on your specific customers needs'},
+  {category: 'Programming', 
+    icon: 'fa-code', 
+    description: 'Programming is the process of taking an algorithm and encoding it into a notation, '+
+    'a programming language, so that it can be executed by a computer'},
+  {category: 'GK',
+   icon: 'fa-book', 
+   description: 'General Knowledge is knowledge of a broad range of facts about various subjects.'},
+  {category: 'Marketing', 
+  icon: 'fa-pie-chart', 
+  description: 'Marketing the action or business of promoting and '+
+  'selling products or services, including market research and advertising.'},
+  {category: 'Politics', 
+  icon: 'fa-handshake-o', 
+  description: 'Politics is the activities associated with the governance of '+
+  'a country or area, especially the debate between parties having power.'}
+];
+
 interface LandingProps { }
 
 interface LandingState { }
 
 export default class Landing extends React.Component<LandingProps, LandingState> {
-  frontSideOfCard = (
+  frontSideOfCard = (icon: string, category: string) => (
     <div>
-      <i className={classnames('fa', 'fa-camera-retro', 'io-landing__card-icon')} />
-      <br />
-      Category
+      <i className={classnames('fa', `${icon}`, 'io-landing__card-icon')} />
+      <br /><br />
+      <h3>{category}</h3>
     </div>
   )
 
-  backSideOfCard = (
+
+  backSideOfCard = (description: string) => (
     <div>
-      Category Description
+      {description}
     </div>
   )
+
   render() {
     return (
       <div className={classnames('io-landing')}>
@@ -36,10 +61,11 @@ export default class Landing extends React.Component<LandingProps, LandingState>
               You can ask a question in the following categories
             </h1>
             <div className={classnames('io-landing__section-one-categories', 'io-row')}>
-              <RotatingCard frontSide={this.frontSideOfCard} backSide={this.backSideOfCard} />
-              <RotatingCard frontSide={this.frontSideOfCard} backSide={this.backSideOfCard} />
-              <RotatingCard frontSide={this.frontSideOfCard} backSide={this.backSideOfCard} />
-              <RotatingCard frontSide={this.frontSideOfCard} backSide={this.backSideOfCard} />
+              {categories.map(({ category, icon, description }) => (
+                <RotatingCard 
+                  frontSide={this.frontSideOfCard(icon, category)} 
+                  backSide={this.backSideOfCard(description)} />
+              ))}
             </div>
           </div>
         </main>
