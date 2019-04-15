@@ -1,0 +1,62 @@
+@import 'src/lib/sass/abstracts/variables';
+
+.io-landing {
+  height: 100%;
+  width: 100%;
+}
+
+.io-landing__header {
+  width: 100%;
+  height: 100%;
+  background: 
+  linear-gradient(
+    to top, 
+    rgba($primary-color, .5), 
+    rgba($secondary-color, .7)),
+  url(../../assets/landing_header.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  position: relative;
+
+  clip-path: polygon(0% 0%, 0 100%, 100% 75%, 100% 0);
+}
+
+.io-landing__header-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.io-landing__header-text > span:nth-child(1) {
+  font-weight: bold;
+  font-size: 4rem;
+  text-transform: uppercase;
+  display: block;
+  animation: moveInLeft 1s ease-out;
+}
+
+.io-landing__header-text > span:nth-child(2) {
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.32rem;
+  text-transform: uppercase;
+  display: block;
+  animation: moveInRight 1s ease-out;
+}
+
+.io-landing__section-one {
+  margin: 4rem auto;
+  max-width: $max-section-width;
+  text-align: center;
+}
+
+.io-landing__section-one-categories {
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+.io-landing__card-icon::before {
+  font-size: 10rem;
+}

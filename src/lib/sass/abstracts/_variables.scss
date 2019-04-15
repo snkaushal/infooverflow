@@ -1,0 +1,18 @@
+@import './themes';
+
+$theme: "default";
+
+// Width Variables
+$max-section-width: 1200px;
+
+/// Copy text color
+/// @type Color
+$text-color: map-get(map-get($themes, $theme), "text-color") !default;
+$error-text: map-get(map-get($themes, $theme), "text-color-error") !default;
+$primary-color: map-get(map-get($themes, $theme), "primary-color") !default;
+$secondary-color: map-get(map-get($themes, $theme), "secondary-color") !default;
+$mid-grey: map-get(map-get($themes, $theme), "mid-grey") !default;
+$dark-grey: map-get(map-get($themes, $theme), "dark-grey") !default;
+
+// Background Color
+$bg-color: map-get(map-get($themes, $theme), "bg-color") !default;

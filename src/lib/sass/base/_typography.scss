@@ -1,0 +1,9 @@
+@import 'src/lib/sass/abstracts/variables';
+
+.io-heading-primary {
+  font-size: 4rem;
+  background: linear-gradient(to right, ($primary-color), ($secondary-color) 50%);
+  background-clip: text;
+  display: inline-block;
+  color: transparent;
+}
