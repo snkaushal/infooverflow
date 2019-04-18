@@ -1,0 +1,58 @@
+$points: (
+  xs: .5rem,
+  sm: .8rem,
+  md: 1.6rem,
+  lg: 2.4rem,
+  xl: 3rem,
+  sl: 5rem,
+);
+
+@each $size, $value in $points {
+	.io-#{$size}-marg {
+    margin: $value
+  }
+  .io-#{$size}-marg--horiz {
+    margin: 0 $value
+  }
+  .io-#{$size}-marg--vert {
+    margin: $value 0
+  }
+  .io-#{$size}-marg--top {
+    margin-top: $value
+  }
+  .io-#{$size}-marg--bottom {
+    margin-bottom: $value
+  }
+  .io-#{$size}-marg--left {
+    margin-left: $value
+  }
+  .io-#{$size}-marg--right {
+    margin-right: $value
+  }
+
+  .io-marg--center {
+    margin: 0 auto;
+  }
+
+  .io-#{$size}-pad {
+    padding: $value
+  }
+  .io-#{$size}-pad--horiz {
+    padding: 0 $value
+  }
+  .io-#{$size}-pad--vert {
+    padding: $value 0
+  }
+  .io-#{$size}-pad--top {
+    padding-top: $value
+  }    
+  .io-#{$size}-pad--bottom {
+    padding-bottom: $value
+  }
+  .io-#{$size}-pad--left {
+    padding-left: $value
+  }
+  .io-#{$size}-pad--right {
+    padding-right: $value
+  }
+}
