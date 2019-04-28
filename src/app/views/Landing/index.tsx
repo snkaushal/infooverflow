@@ -84,7 +84,6 @@ export default class Landing extends React.Component<LandingProps, LandingState>
 
               </figure>
               <figcaption>
-                This has to be reverted.
                 Withholding information is the essence of tyranny.
                 Control of the flow of information is the tool of the dictatorship.
               </figcaption>
