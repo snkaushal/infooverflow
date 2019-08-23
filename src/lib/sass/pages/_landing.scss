@@ -76,7 +76,7 @@
   flex-direction: column;
   align-items: center;
 
-  transform: skewY(-10deg)
+  transform: skewY(-10deg);
 }
 
 .io-landing__quotation-container {
@@ -87,6 +87,10 @@
   background: rgba(255, 255, 255, 0.3);
   color: black;
   transform: skew(10deg, 10deg);
+
+  & > figure, figcaption {
+    transform: skew(-10deg);
+  }
 }
 
 .io-landing__quotation-image {
